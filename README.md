@@ -1,1 +1,1 @@
-# My Go Web App
+# Web App to remove EXIF Data from images
