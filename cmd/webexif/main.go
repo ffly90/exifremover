@@ -19,6 +19,9 @@ func main() {
 func serveApp(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	log.Print(path)
+	if path == "/" {
+		path = "/index.html"
+	}
 	// Serve embedded files
 	data, err := content.ReadFile("static" + path)
 	if err != nil {
